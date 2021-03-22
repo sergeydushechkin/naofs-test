@@ -10,24 +10,67 @@
 </head>
 <body>
   <div id="root">
-    <main>
-      <section>
-        <h1>Test car</h1>
-        <div>
-          <img src="./img/solaris.png" alt="Hyundai solaris">
-          <div>
-            <p>Hyundai</p>
-            <p>Solaris</p>
-            <p>Gran Coupe</p>
+    <main class="car-page">
+      <section class="car-page__car-list car-list">
+        <h1 class="car-list__header">Test car</h1>
+        <div class="car-list__car car">
+          <div class="car__banner banner">
+            <img class="banner__image" src="./img/solaris.png" alt="Hyundai solaris">
+            <div class="banner__description">
+              <p class="banner__brand">Hyundai</p>
+              <p class="banner__model">Solaris</p>
+              <p class="banner__type">Gran Coupe</p>
+            </div>
           </div>
-        </div>
-        <div>
-          <p>Цена Hyundai Solaris:</p>
-          <p>50000 &#8381;</p>
-          <div>
-            <div></div>
-            <div>500000 &#8381;</div>
-            <div>1500000 &#8381;</div>
+          <div class="car__calculator calculator">
+            <ul class="calculator__fields fields">
+              <li class="fields__field field">
+                <div class="field__indicator indicator">
+                  <p class="indicator__description">Цена Hyundai Solaris:</p>
+                  <div class="indicator__values">
+                    <p class="indicator__value">500000 &#8381;</p>
+                  </div>
+                  <div class="indicator__slider slider">
+                    <div class="slider__button">Control</div>
+                  </div>
+                </div>
+                <div class="field__labels labels">
+                  <div class="labels__min">500000 &#8381;</div>
+                  <div class="labels__max">1500000 &#8381;</div>
+                </div>
+              </li>
+              <li class="fields__field field">
+                <div class="field__indicator indicator">
+                  <p class="indicator__description">Первоначальный взнос</p>
+                  <div class="indicator__values">
+                    <p class="indicator__value">50000 &#8381;</p>
+                    <p class="indicator__percent">10%</p>
+                  </div>
+                  <div class="indicator__slider slider">
+                    <div class="slider__button">Control</div>
+                  </div>
+                </div>
+                <div class="field__labels labels">
+                  <div class="labels__min">10 %</div>
+                  <div class="labels__max">49%</div>
+                </div>
+              </li>
+              <li class="fields__field field">
+                <div class="field__indicator indicator">
+                  <p class="indicator__description">Срок лизинга</p>
+                  <div class="indicator__values">
+                    <p class="indicator__value">3 года</p>
+                  </div>
+                  <div class="indicator__slider slider">
+                    <div class="slider__button">Control</div>
+                  </div>
+                </div>
+                <div class="field__labels labels">
+                  <div class="labels__min">1 мес</div>
+                  <div class="labels__max">4 года</div>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
