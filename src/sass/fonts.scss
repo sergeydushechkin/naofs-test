@@ -1,28 +1,28 @@
 @font-face {
-    font-family: "Montserrat";
-    src: local("MontserratMeduim"),
-      url("fonts/Montserrat-Medium.woff2") format("woff2"),
-      url("fonts/Montserrat-Medium.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: "Montserrat";
-    src: local("MontserratSemiBold"),
-      url("fonts/Montserrat-SemiBold.woff2") format("woff2"),
-      url("fonts/Montserrat-SemiBold.woff") format("woff");
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: "ALSGorizont";
-    src: local("ALSGorizontBold"),
-      url("fonts/ALSGorizont-BoldExpanded.otf") format("opentype");
-    font-weight: bold;
-    font-style: normal;
-  }
-   
-  /*font-family: "Montserrat", "Arial", sans-serif;*/
-  /*font-family: "ALSGorizont", "Arial", sans-serif;*/
+  font-family: "Montserrat";
+  src: local("MontserratMeduim"),
+    url("fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("fonts/Montserrat-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("MontserratSemiBold"),
+    url("fonts/Montserrat-SemiBold.woff2") format("woff2"),
+    url("fonts/Montserrat-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ALSGorizont";
+  src: local("ALSGorizontBold"),
+    url("fonts/ALSGorizont-BoldExpanded.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*font-family: "Montserrat", "Arial", sans-serif;*/
+/*font-family: "ALSGorizont", "Arial", sans-serif;*/
