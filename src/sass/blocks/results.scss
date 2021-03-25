@@ -32,6 +32,8 @@
 }
 
 .results__currency {
+  margin-right: 8px;
+
   opacity: 0.5;
 }
 
@@ -56,12 +58,12 @@
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 500;
   font-size: 14px;
-  line-height: 0px;
+  line-height: 24px;
 
   color: #2858ff;
 
   align-items: center;
-  padding: 10px;
+  padding: 3px 10px;
 
   background: rgba(255, 255, 255, 0.3);
   border-radius: 4px;
