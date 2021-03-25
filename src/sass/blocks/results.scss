@@ -1,0 +1,68 @@
+.results__main {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.results__description {
+  margin-bottom: 4px;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #2a324a;
+
+  opacity: 0.4;
+}
+
+.results__price {
+  font-family: "ALSGorizont", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+  color: #273975;
+
+  &--month {
+    font-size: 24px;
+    line-height: 24px;
+    color: #040628;
+  }
+}
+
+.results__currency {
+  opacity: 0.5;
+}
+
+.results__button {
+  width: 24px;
+  height: 24px;
+
+  margin: auto 0;
+
+  background-image: url("img/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+
+  cursor: pointer;
+}
+
+.results__details {
+  margin-bottom: 16px;
+}
+
+.results__day {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 0px;
+
+  color: #2858ff;
+
+  align-items: center;
+  padding: 10px;
+
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}

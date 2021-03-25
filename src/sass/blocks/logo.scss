@@ -1,0 +1,16 @@
+.logo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo__image {
+  height: 20px;
+}
+
+.logo__button {
+  width: 32px;
+  height: 32px;
+
+  background-image: url("img/icon-close.svg");
+  background-repeat: no-repeat;
+}

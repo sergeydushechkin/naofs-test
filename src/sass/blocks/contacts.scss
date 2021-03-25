@@ -1,0 +1,21 @@
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 16px;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 120%;
+  color: #040628;
+  opacity: 0.6;
+
+  border-bottom: 1px solid #04062826;
+}
+
+.contacts__city {
+  font-weight: 600;
+}
+
+.contacts__tel {
+  font-weight: 500;
+}

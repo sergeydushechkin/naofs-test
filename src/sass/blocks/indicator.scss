@@ -1,0 +1,45 @@
+.indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 8px 16px 0;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
+
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.indicator__description {
+  margin-bottom: 8px;
+
+  font-size: 13px;
+  line-height: 16px;
+
+  color: #000000;
+  opacity: 0.6;
+}
+
+.indicator__values {
+  margin-bottom: 8px;
+
+  font-family: "ALSGorizont", "Arial", sans-serif;
+  font-weight: bold;
+  color: #273975;
+}
+
+.indicator__value {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.indicator__currency {
+  opacity: 0.5;
+}
+
+.indicator__percent {
+  font-size: 14px;
+  line-height: 15.4px;
+  opacity: 0.4;
+}

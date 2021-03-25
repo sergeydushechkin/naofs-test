@@ -1,0 +1,40 @@
+.slider__axis {
+  position: relative;
+
+  height: 2px;
+
+  margin-bottom: 8px;
+
+  background: #a6b8fb;
+  border-radius: 10px;
+}
+
+.slider__cursor {
+  position: absolute;
+
+  top: -10px;
+  left: 0%;
+
+  width: 20px;
+  height: 20px;
+
+  background: #ffffff;
+
+  border: 5px solid #2858ff;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.slider__labels {
+  display: flex;
+  justify-content: space-between;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14.4px;
+
+  color: #040628;
+  opacity: 0.3;
+}

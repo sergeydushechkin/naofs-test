@@ -18,22 +18,22 @@
       </div>
       <div class="car-header__logo logo">
         <div class="logo__container">
-          <img class="logo__image" src="./img/logo.svg" alt="AzurDRIVE">
+          <img class="logo__image" src="./img/logo.svg" alt="AzurDRIVE" width="179" height="20">
         </div>
-        <div class="logo__button">Close</div>
+        <div class="logo__button"><span class="visually-hidden">Close</span></div>
       </div>
     </header>
     <main class="car-page">
       <section class="car-page__car-list car-list">
-        <h1 class="car-list__header">Test car</h1>
+        <h1 class="visually-hidden">Test car</h1>
         <div class="car-list__car car">
           <div class="car__banner banner">
-            <img class="banner__image" src="./img/solaris.png" alt="Hyundai solaris">
             <div class="banner__description">
               <p class="banner__brand">Hyundai</p>
               <p class="banner__model">Solaris</p>
               <p class="banner__type">Gran Coupe</p>
             </div>
+            <img class="banner__image" src="./img/solaris.png" alt="Hyundai solaris">
           </div>
           <div class="car__calculator calculator">
             <ul class="calculator__fields fields">
@@ -41,31 +41,35 @@
                 <div class="field__indicator indicator">
                   <div class="indicator__description">Цена Hyundai Solaris:</div>
                   <div class="indicator__values">
-                    <div class="indicator__value">500000 &#8381;</div>
-                  </div>
-                  <div class="indicator__slider slider">
-                    <div class="slider__button">Control</div>
+                    <div class="indicator__value">500 000 <span class="indicator__currency">&#8381;</span></div>
                   </div>
                 </div>
-                <div class="field__labels labels">
-                  <div class="labels__min">500000 &#8381;</div>
-                  <div class="labels__max">1500000 &#8381;</div>
+                <div class="field__slider slider">
+                  <div class="slider__axis">
+                    <div class="slider__cursor"><span class="visually-hidden">Control</span></div>
+                  </div>
+                  <div class="slider__labels">
+                    <div class="slider__min">500 000 &#8381;</div>
+                    <div class="slider__max">1 500 000 &#8381;</div>
+                  </div>
                 </div>
               </li>
               <li class="fields__field field">
                 <div class="field__indicator indicator">
                   <div class="indicator__description">Первоначальный взнос</div>
                   <div class="indicator__values">
-                    <div class="indicator__value">50000 &#8381;</div>
+                    <div class="indicator__value">50 000 <span class="indicator__currency">&#8381;</span></div>
                     <div class="indicator__percent">10%</div>
                   </div>
-                  <div class="indicator__slider slider">
-                    <div class="slider__button">Control</div>
-                  </div>
                 </div>
-                <div class="field__labels labels">
-                  <div class="labels__min">10 %</div>
-                  <div class="labels__max">49%</div>
+                <div class="field__slider slider">
+                  <div class="slider__axis">
+                    <div class="slider__cursor"><span class="visually-hidden">Control</span></div>
+                  </div>
+                  <div class="slider__labels">
+                    <div class="slider__min">10 %</div>
+                    <div class="slider__max">49%</div>
+                  </div>
                 </div>
               </li>
               <li class="fields__field field">
@@ -74,13 +78,15 @@
                   <div class="indicator__values">
                     <div class="indicator__value">3 года</div>
                   </div>
-                  <div class="indicator__slider slider">
-                    <div class="slider__button">Control</div>
-                  </div>
                 </div>
-                <div class="field__labels labels">
-                  <div class="labels__min">1 мес</div>
-                  <div class="labels__max">4 года</div>
+                <div class="field__slider slider">
+                  <div class="slider__axis">
+                    <div class="slider__cursor"><span class="visually-hidden">Control</span></div>
+                  </div>
+                  <div class="slider__labels">
+                    <div class="slider__min">1 мес</div>
+                    <div class="slider__max">4 года</div>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -92,19 +98,19 @@
                     224 126 <span class="results__currency">&#8381;</span>
                   </div>
                 </div>
-                <div class="results__button results__button--closed">Open</div>
+                <div class="results__button results__button--closed"><span class="visually-hidden">Open</span></div>
               </div>
               <div class="results__details">
                 <div class="results__description">Ежемесячный платеж от</div>
                 <div class="results__text">
                   <div class="results__price results__price--month">
                     34 150 <span class="results__currency results__currency--month">&#8381;</span>
+                    <span class="results__day">или 999 &#8381; в день</span>
                   </div>
-                  <span class="results__day">или 999 &#8381; в день</span>
                 </div>
-                <div class="results__annotation">Расчет носит предварительный характер</div>
               </div>
             </div>
+            <div class="calculator__annotation">Расчет носит предварительный характер</div>
           </div>
         </div>
       </section>
