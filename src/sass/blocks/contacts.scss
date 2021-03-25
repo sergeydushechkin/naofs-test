@@ -1,11 +1,11 @@
 .contacts {
   display: flex;
   justify-content: space-between;
-  margin: 0 16px;
+  padding: 17px 16px;
+  padding-bottom: 12px;
 
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 13px;
-  line-height: 120%;
   color: #040628;
   opacity: 0.6;
 
@@ -14,8 +14,10 @@
 
 .contacts__city {
   font-weight: 600;
+  line-height: 15.6px;
 }
 
 .contacts__tel {
   font-weight: 500;
+  line-height: 14.3px;
 }
