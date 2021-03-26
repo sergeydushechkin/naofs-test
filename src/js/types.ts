@@ -3,33 +3,37 @@ interface Header {
   phone: string;
 }
 
+interface Banner {
+  brand: string;
+  model: string;
+  type: string;
+  image: string;
+}
+
+interface Calculator {
+  price: {
+    min: string;
+    max: string;
+  },
+  contribution: {
+    min: string;
+    max: string;
+  },
+  leasing: {
+    min: string;
+    max: string;
+  },
+  economy: string;
+  payment: {
+    month: string;
+    day: string;
+  }
+}
+
 interface Car {
   name: string;
-  banner: {
-    brand: string;
-    model: string;
-    type: string;
-    image: string;
-  },
-  calculator: {
-    price: {
-      min: string;
-      max: string;
-    },
-    contribution: {
-      min: string;
-      max: string;
-    },
-    leasing: {
-      min: string;
-      max: string;
-    },
-    economy: string;
-    payment: {
-      month: string;
-      day: string;
-    }
-  }
+  banner: Banner,
+  calculator: Calculator
 }
 
 interface CarsKeyData {
@@ -41,4 +45,4 @@ interface Data {
   cars: CarsKeyData;
 }
 
-export {Data, Car, Header, CarsKeyData};
+export {Data, Car, Header, CarsKeyData, Banner, Calculator};

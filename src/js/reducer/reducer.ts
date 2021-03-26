@@ -23,11 +23,11 @@ const ActionType = {
 
 const ActionCreator = {
   loadHeader: (data: Header):Action => ({
-    type: ActionType.LOAD_CARS,
+    type: ActionType.LOAD_HEADER,
     payload: data,
   }),
   loadCars: (data: CarsKeyData):Action => ({
-    type: ActionType.LOAD_HEADER,
+    type: ActionType.LOAD_CARS,
     payload: data,
   }),
 };
