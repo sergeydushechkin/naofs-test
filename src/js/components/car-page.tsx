@@ -3,30 +3,23 @@ import {useSelector} from "react-redux";
 
 import {getCarsData} from "../reducer/selectors";
 
+import Banner from "./banner";
+
 interface Props {
   car: string;
 }
 
 export const CarPage:React.FunctionComponent<Props> = (props: Props) => {
-  const car = {props};
+  const {car} = props;
   const headerData = useSelector(getCarsData);
-  // const {name, banner, calculator} = headerData[car];
+  const {name, banner, calculator} = headerData[car];
 
   return (
     <main className="car-page">
       <section className="car-page__car-list car-list">
         <h1 className="visually-hidden">Test car</h1>
         <div className="car-list__car car">
-          <div className="car__banner banner">
-            <div className="banner__description">
-              <p className="banner__brand">Hyundai</p>
-              <p className="banner__model">Solaris</p>
-              <p className="banner__type">Gran Coupe</p>
-            </div>
-            <div className="banner__image-container">
-              <img className="banner__image" src="./img/solaris.png" alt="Hyundai solaris" width="335" height="169" />
-            </div>
-          </div>
+          <Banner banner={banner}/>
           <div className="car__calculator calculator">
             <ul className="calculator__fields fields">
               <li className="fields__field field">

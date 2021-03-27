@@ -1,11 +1,11 @@
 import * as React from "react";
-import {Banner} from "./types";
+import {CarBanner} from "../types";
 
 interface Props {
-  banner: Banner;
+  banner: CarBanner;
 }
 
-export const CarHeader:React.FunctionComponent<Props> = (props: Props) => {
+export const Banner:React.FunctionComponent<Props> = (props: Props) => {
   const {banner} = props;
   const {brand, model, type, image} = banner;
 
@@ -23,4 +23,4 @@ export const CarHeader:React.FunctionComponent<Props> = (props: Props) => {
   );
 };
 
-export default CarHeader;
+export default Banner;

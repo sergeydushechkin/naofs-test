@@ -3,7 +3,7 @@ interface Header {
   phone: string;
 }
 
-interface Banner {
+interface CarBanner {
   brand: string;
   model: string;
   type: string;
@@ -32,7 +32,7 @@ interface Calculator {
 
 interface Car {
   name: string;
-  banner: Banner,
+  banner: CarBanner,
   calculator: Calculator
 }
 
@@ -45,4 +45,4 @@ interface Data {
   cars: CarsKeyData;
 }
 
-export {Data, Car, Header, CarsKeyData, Banner, Calculator};
+export {Data, Car, Header, CarsKeyData, CarBanner, Calculator};
