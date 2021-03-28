@@ -14,21 +14,22 @@ const CarsData = `{
       },
       "calculator": {
         "price": {
-          "min": "500 000",
-          "max": "1 500 000"
+          "min": 500000,
+          "max": 1500000
         },
         "contribution": {
-          "min": "10",
-          "max": "49"
+          "min": 10,
+          "max": 49
         },
         "leasing": {
-          "min": "1 месяц",
-          "max": "4 года"
+          "min": 1,
+          "max": 48,
+          "selected": 36
         },
-        "economy": "224 126",
+        "economy": 224126,
         "payment": {
-          "month": "34 150",
-          "day": "999"
+          "month": 34150,
+          "day": 999
         }
       }
     }

@@ -10,30 +10,31 @@ interface CarBanner {
   image: string;
 }
 
-interface Calculator {
+interface CarCalculator {
   price: {
-    min: string;
-    max: string;
+    min: number;
+    max: number;
   },
   contribution: {
-    min: string;
-    max: string;
+    min: number;
+    max: number;
   },
   leasing: {
-    min: string;
-    max: string;
+    min: number;
+    max: number;
+    selected: number
   },
-  economy: string;
+  economy: number;
   payment: {
-    month: string;
-    day: string;
+    month: number;
+    day: number;
   }
 }
 
 interface Car {
   name: string;
   banner: CarBanner,
-  calculator: Calculator
+  calculator: CarCalculator
 }
 
 interface CarsKeyData {
@@ -45,4 +46,4 @@ interface Data {
   cars: CarsKeyData;
 }
 
-export {Data, Car, Header, CarsKeyData, CarBanner, Calculator};
+export {Data, Car, Header, CarsKeyData, CarBanner, CarCalculator};
