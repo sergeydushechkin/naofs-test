@@ -10,20 +10,16 @@ interface CarBanner {
   image: string;
 }
 
+interface Range {
+  min: number;
+  max: number;
+  selected: number
+}
+
 interface CarCalculator {
-  price: {
-    min: number;
-    max: number;
-  },
-  contribution: {
-    min: number;
-    max: number;
-  },
-  leasing: {
-    min: number;
-    max: number;
-    selected: number
-  },
+  price: Range,
+  contribution: Range,
+  leasing: Range,
   economy: number;
   payment: {
     month: number;

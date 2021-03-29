@@ -15,11 +15,13 @@ const CarsData = `{
       "calculator": {
         "price": {
           "min": 500000,
-          "max": 1500000
+          "max": 1500000,
+          "selected": 1000000
         },
         "contribution": {
           "min": 10,
-          "max": 49
+          "max": 49,
+          "selected": 10
         },
         "leasing": {
           "min": 1,
