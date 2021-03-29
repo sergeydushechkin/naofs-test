@@ -11,38 +11,32 @@ interface Props {
 export const Slider:React.FunctionComponent<Props> = (props: Props) => {
   const {min, max, selected, measure, cbFormat} = props;
 
+  const axisRef = React.useRef(null);
   const cursorRef = React.useRef(null);
 
-  const percent = Math.ceil(100 * (selected - min) / (max - min));
-  const offset = percent > 5 ? 10 : 0;
-  const position = {left: `calc(${percent}% - ${offset}px)`};
+  const percent = 100 * (selected - min) / (max - min);
+  const position = {left: `${percent}%`};
 
   const mouseDownHandle = (downEvt) => {
     downEvt.persist();
     let startX = downEvt.clientX;
-    console.log(cursorRef);
-    console.log(downEvt);
-
-    const MouseUpHandler = (upEvt) => {
-      console.log(`upEvt: ${upEvt}`);
-
-      document.removeEventListener(`mouseup`, MouseUpHandler);
-      document.removeEventListener(`mousemove`, MouseMoveHandler);
-    };
 
     const MouseMoveHandler = (moveEvt) => {
-      console.log(`moveEvt: ${moveEvt}`);
-
       const shiftX = startX - moveEvt.clientX;
       startX = moveEvt.clientX;
       const offsetX = cursorRef.current.offsetLeft - shiftX;
 
-      cursorRef.current.innerText = `${startX} ${shiftX} ${offsetX}`;
+      const percentX = (offsetX / axisRef.current.offsetWidth) * 100;
 
-      cursorRef.current.style.left = `${100}%`;
+      if (percentX >= 0 && percentX <= 100) {
+        cursorRef.current.style.left = `${percentX}%`;
+      }
     };
 
-    console.log(`donwEvt: ${downEvt}`);
+    const MouseUpHandler = () => {
+      document.removeEventListener(`mouseup`, MouseUpHandler);
+      document.removeEventListener(`mousemove`, MouseMoveHandler);
+    };
 
     document.addEventListener(`mouseup`, MouseUpHandler);
     document.addEventListener(`mousemove`, MouseMoveHandler);
@@ -50,7 +44,7 @@ export const Slider:React.FunctionComponent<Props> = (props: Props) => {
 
   return (
     <div className="field__slider slider">
-      <div className="slider__axis">
+      <div ref={axisRef} className="slider__axis">
         <div ref={cursorRef} onMouseDown={mouseDownHandle} className="slider__cursor" style={position}><span className="visually-hidden">Control</span></div>
       </div>
       <div className="slider__labels">
