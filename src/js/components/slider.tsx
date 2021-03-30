@@ -22,6 +22,10 @@ export const Slider:React.FunctionComponent<Props> = (props: Props) => {
     let startX = downEvt.clientX;
 
     const MouseMoveHandler = (moveEvt) => {
+      if (window.getSelection) {
+        window.getSelection().removeAllRanges();
+      }
+
       const shiftX = startX - moveEvt.clientX;
       startX = moveEvt.clientX;
       const offsetX = cursorRef.current.offsetLeft - shiftX;
