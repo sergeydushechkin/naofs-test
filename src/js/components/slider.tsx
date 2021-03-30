@@ -6,16 +6,16 @@ interface Props {
   selected: number;
   measure: string;
   cbFormat: (number) => string;
+  cbSetValue: (number) => void
 }
 
 export const Slider:React.FunctionComponent<Props> = (props: Props) => {
-  const {min, max, selected, measure, cbFormat} = props;
+  const {min, max, selected, measure, cbFormat, cbSetValue} = props;
+
+  const position = 100 * (selected - min) / (max - min);
 
   const axisRef = React.useRef(null);
   const cursorRef = React.useRef(null);
-
-  const percent = 100 * (selected - min) / (max - min);
-  const position = {left: `${percent}%`};
 
   const mouseDownHandle = (downEvt) => {
     downEvt.persist();
@@ -29,7 +29,7 @@ export const Slider:React.FunctionComponent<Props> = (props: Props) => {
       const percentX = (offsetX / axisRef.current.offsetWidth) * 100;
 
       if (percentX >= 0 && percentX <= 100) {
-        cursorRef.current.style.left = `${percentX}%`;
+        cbSetValue((max - min) / 100 * percentX + min);
       }
     };
 
@@ -45,7 +45,7 @@ export const Slider:React.FunctionComponent<Props> = (props: Props) => {
   return (
     <div className="field__slider slider">
       <div ref={axisRef} className="slider__axis">
-        <div ref={cursorRef} onMouseDown={mouseDownHandle} className="slider__cursor" style={position}><span className="visually-hidden">Control</span></div>
+        <div ref={cursorRef} onMouseDown={mouseDownHandle} className="slider__cursor" style={{left: `${position}%`}}><span className="visually-hidden">Control</span></div>
       </div>
       <div className="slider__labels">
         <div className="slider__min">{cbFormat(min)}{measure}</div>
