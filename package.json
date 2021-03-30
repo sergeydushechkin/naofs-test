@@ -11,8 +11,8 @@
     "test": "npm run eslint",
     "htmlbuild": "gulp build",
     "htmlstart": "gulp start",
-    "jsbuild": "webpack --mode production",
-    "jsstart": "webpack-dev-server"
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server"
   },
   "browserslist": [
     "defaults"
