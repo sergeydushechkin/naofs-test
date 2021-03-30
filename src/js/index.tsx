@@ -1,3 +1,4 @@
+import "core-js/es/object/assign";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {createStore, applyMiddleware, compose} from "redux";

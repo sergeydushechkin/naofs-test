@@ -62,7 +62,7 @@ body {
   font-size: 13px;
   color: #040628;
   opacity: 0.6;
-  border-bottom: 1px solid #04062826; }
+  border-bottom: 1px solid rgba(4, 6, 40, 0.38); }
 
 .contacts__city {
   font-weight: 600;
