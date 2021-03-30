@@ -12,6 +12,7 @@ interface Props {
 
 export const Results:React.FunctionComponent<Props> = (props: Props) => {
   const {economy, payment} = props;
+  const [closed, setClosed] = React.useState(false);
 
   return (
     <div className="calculator__results results">
@@ -22,17 +23,21 @@ export const Results:React.FunctionComponent<Props> = (props: Props) => {
             {formatPrice(economy)} <span className="results__currency">&#8381;</span>
           </div>
         </div>
-        <div className="results__button results__button--closed"><span className="visually-hidden">Open</span></div>
+        <div onClick={() => setClosed(!closed)} className={`results__button${closed ? ` results__button--closed` : `` }`}><span className="visually-hidden">Open</span></div>
       </div>
-      <div className="results__details">
-        <div className="results__description">Ежемесячный платеж от</div>
-        <div className="results__text">
-          <div className="results__price results__price--month">
-            {formatPrice(payment.month)} <span className="results__currency results__currency--month">&#8381;</span>
-            <span className="results__day">или {formatPrice(payment.day)} &#8381; в день</span>
+      {closed
+        ? ``
+        :
+        <div className="results__details">
+          <div className="results__description">Ежемесячный платеж от</div>
+          <div className="results__text">
+            <div className="results__price results__price--month">
+              {formatPrice(payment.month)} <span className="results__currency results__currency--month">&#8381;</span>
+              <span className="results__day">или {formatPrice(payment.day)} &#8381; в день</span>
+            </div>
           </div>
         </div>
-      </div>
+      }
     </div>
   );
 };

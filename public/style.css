@@ -85,7 +85,8 @@ body {
   width: 32px;
   height: 32px;
   background-image: url("img/icon-close.svg");
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  cursor: pointer; }
 
 .car-page {
   margin: 0 auto;
@@ -255,7 +256,10 @@ body {
   background-image: url("img/icon-arrow.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  cursor: pointer; }
+  cursor: pointer;
+  transition-duration: 0.2s; }
+  .results__button--closed {
+    transform: rotate(-90deg); }
 
 .results__details {
   margin-bottom: 16px; }
