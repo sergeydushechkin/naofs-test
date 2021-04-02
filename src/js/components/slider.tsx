@@ -20,6 +20,9 @@ export const Slider:React.FunctionComponent<Props> = (props: Props) => {
   const mouseDownHandle = (downEvt) => {
     downEvt.persist();
     let startX = downEvt.clientX;
+    const axisRect = axisRef.current.getBoundingClientRect();
+    const axisLeft = axisRect.left;
+    const axisRight = axisRect.right;
 
     const MouseMoveHandler = (moveEvt) => {
       if (window.getSelection) {
@@ -32,7 +35,7 @@ export const Slider:React.FunctionComponent<Props> = (props: Props) => {
 
       const percentX = (offsetX / axisRef.current.offsetWidth) * 100;
 
-      if (percentX >= 0 && percentX <= 100) {
+      if ((percentX >= 0 && percentX <= 100) && (moveEvt.clientX > axisLeft && moveEvt.clientX < axisRight)) {
         cbSetValue((max - min) / 100 * percentX + min);
       }
     };
